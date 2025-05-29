@@ -1,85 +1,281 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Truffle Elite - Premium Summer Truffles</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <h1>Truffle Elite</h1>
-        <p>Premium Truffles for Europe & UK</p>
-    </header>
+/* Reset simplu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Indulge in Luxury</h2>
-        <p>Fresh Summer Truffles Starting at £135/kg</p>
-    </section>
+/* Body și font */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #0a0a0a;  /* negru foarte închis */
+    color: #f0e6d2; /* crem deschis, cald */
+    line-height: 1.6;
+    font-size: 16px;
+}
 
-    <!-- Product Section -->
-    <section class="products">
-        <h2>Our Truffles</h2>
-        <div class="truffle-item">
-            <h3>Summer Truffles</h3>
-            <div class="truffle-images">
-                <img src="images/summer-truffle-1.jpg" alt="Summer Truffles Whole">
-                <img src="images/summer-truffle-2.jpg" alt="Summer Truffles Cut">
-            </div>
-            <p>Price: £135/kg</p>
-            <p>Available in fixed quantities from 1kg to 10kg.</p>
-            <select id="quantity">
-                <option value="1">1kg - £135</option>
-                <option value="2">2kg - £270</option>
-                <option value="3">3kg - £405</option>
-                <option value="4">4kg - £540</option>
-                <option value="5">5kg - £675</option>
-                <option value="6">6kg - £810</option>
-                <option value="7">7kg - £945</option>
-                <option value="8">8kg - £1080</option>
-                <option value="9">9kg - £1215</option>
-                <option value="10">10kg - £1350</option>
-            </select>
-            <button onclick="buyNow()">Buy Now</button>
-        </div>
-        <div class="truffle-item">
-            <h3>Autumn Truffles</h3>
-            <p>Coming Soon</p>
-        </div>
-        <div class="truffle-item">
-            <h3>Winter Truffles</h3>
-            <p>Coming Soon</p>
-        </div>
-    </section>
+/* Link-uri */
+a {
+    color: #c7a76c; /* auriu mat */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
 
-    <!-- Bulk Offer Form -->
-    <section class="bulk-offer">
-        <h2>Request a Bulk Offer</h2>
-        <p>For quantities above 10kg, submit your offer below.</p>
-        <form id="bulkForm">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="quantity-bulk">Desired Quantity (kg):</label>
-            <input type="number" id="quantity-bulk" name="quantity-bulk" min="11" required>
-            <label for="offer-price">Your Offer Price (£):</label>
-            <input type="number" id="offer-price" name="offer-price" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message"></textarea>
-            <button type="submit">Submit Offer</button>
-        </form>
-    </section>
+a:hover {
+    color: #f5d285; /* auriu deschis */
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>Contact us: <a href="mailto:truffleelite627@gmail.com">truffleelite627@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/07846378560">07846378560</a></p>
-    </footer>
+/* Header */
+header {
+    background: linear-gradient(90deg, #1a1a1a, #0a0a0a);
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #c7a76c;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+header h1 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: 3rem;
+    color: #c7a76c;
+    letter-spacing: 3px;
+    margin-bottom: 0.3rem;
+}
+
+header p {
+    font-style: italic;
+    font-weight: 400;
+    color: #b2a07d;
+    font-size: 1.1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: url('images/summer-truffle-hero.jpg') center center/cover no-repeat;
+    color: #f0e6d2;
+    text-align: center;
+    padding: 6rem 2rem;
+    text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+
+.hero h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+}
+
+/* Products Section */
+.products {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+.products h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #c7a76c;
+    letter-spacing: 2px;
+}
+
+/* Truffle items container */
+.truffle-item {
+    background: #1a1a1a;
+    border: 1px solid #3a3a3a;
+    border-radius: 12px;
+    padding: 1.8rem;
+    margin-bottom: 2.5rem;
+    box-shadow: 0 8px 20px rgba(199,167,108,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.truffle-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(199,167,108,0.4);
+}
+
+.truffle-item h3 {
+    font-family: 'Georgia', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: #c7a76c;
+}
+
+/* Imagini trufe */
+.truffle-images {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.truffle-images img {
+    border-radius: 10px;
+    max-width: 48%;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+}
+
+.truffle-images img:hover {
+    transform: scale(1.05);
+}
+
+/* Pret si info */
+.truffle-item p {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+    color: #d9cba1;
+}
+
+/* Select & Button */
+select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    background-color: #3a3a3a;
+    color: #f0e6d2;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+select:hover {
+    background-color: #4e4e4e;
+}
+
+button {
+    background-color: #c7a76c;
+    color: #0a0a0a;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 6px 12px rgba(199,167,108,0.5);
+}
+
+button:hover {
+    background-color: #f5d285;
+}
+
+/* Bulk Offer Section */
+.bulk-offer {
+    max-width: 700px;
+    background: #1a1a1a;
+    margin: 3rem auto 4rem;
+    padding: 2.5rem 2rem;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(199,167,108,0.15);
+    color: #d9cba1;
+}
+
+.bulk-offer h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #c7a76c;
+    text-align: center;
+}
+
+.bulk-offer p {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 600;
+    color: #b2a07d;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background-color: #333333;
+    color: #f0e6d2;
+    font-size: 1rem;
+    resize: vertical;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+    background-color: #4e4e4e;
+    outline: none;
+}
+
+/* Submit button */
+form button[type="submit"] {
+    display: block;
+    width: 100%;
+    background-color: #c7a76c;
+    color: #0a0a0a;
+    border: none;
+    padding: 0.9rem 0;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 6px 14px rgba(199,167,108,0.5);
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #f5d285;
+}
+
+/* Footer */
+footer {
+    background: #121212;
+    text-align: center;
+    padding: 1.8rem 1rem;
+    border-top: 2px solid #c7a76c;
+    color: #b2a07d;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+footer a {
+    color: #c7a76c;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: #f5d285;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .truffle-images {
+        flex-direction: column;
+    }
+
+    .truffle-images img {
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+}
