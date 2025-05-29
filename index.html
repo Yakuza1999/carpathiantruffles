@@ -1,281 +1,368 @@
-/* Reset simplu */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Truffle Elite - Premium Summer Truffles</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display&display=swap');
 
-/* Body și font */
-body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #0a0a0a;  /* negru foarte închis */
-    color: #f0e6d2; /* crem deschis, cald */
-    line-height: 1.6;
-    font-size: 16px;
-}
-
-/* Link-uri */
-a {
-    color: #c7a76c; /* auriu mat */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #f5d285; /* auriu deschis */
-}
-
-/* Header */
-header {
-    background: linear-gradient(90deg, #1a1a1a, #0a0a0a);
-    text-align: center;
-    padding: 2rem 1rem;
-    border-bottom: 2px solid #c7a76c;
-}
-
-header h1 {
-    font-family: 'Georgia', serif;
-    font-weight: 700;
-    font-size: 3rem;
-    color: #c7a76c;
-    letter-spacing: 3px;
-    margin-bottom: 0.3rem;
-}
-
-header p {
-    font-style: italic;
-    font-weight: 400;
-    color: #b2a07d;
-    font-size: 1.1rem;
-}
-
-/* Hero Section */
-.hero {
-    background: url('images/summer-truffle-hero.jpg') center center/cover no-repeat;
-    color: #f0e6d2;
-    text-align: center;
-    padding: 6rem 2rem;
-    text-shadow: 0 0 8px rgba(0,0,0,0.7);
-}
-
-.hero h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2.8rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.hero p {
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-}
-
-/* Products Section */
-.products {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-}
-
-.products h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-    text-align: center;
-    color: #c7a76c;
-    letter-spacing: 2px;
-}
-
-/* Truffle items container */
-.truffle-item {
-    background: #1a1a1a;
-    border: 1px solid #3a3a3a;
-    border-radius: 12px;
-    padding: 1.8rem;
-    margin-bottom: 2.5rem;
-    box-shadow: 0 8px 20px rgba(199,167,108,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.truffle-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(199,167,108,0.4);
-}
-
-.truffle-item h3 {
-    font-family: 'Georgia', serif;
-    font-weight: 700;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    color: #c7a76c;
-}
-
-/* Imagini trufe */
-.truffle-images {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-}
-
-.truffle-images img {
-    border-radius: 10px;
-    max-width: 48%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-    transition: transform 0.3s ease;
-}
-
-.truffle-images img:hover {
-    transform: scale(1.05);
-}
-
-/* Pret si info */
-.truffle-item p {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-    color: #d9cba1;
-}
-
-/* Select & Button */
-select {
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-    border: none;
-    background-color: #3a3a3a;
-    color: #f0e6d2;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-right: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-select:hover {
-    background-color: #4e4e4e;
-}
-
-button {
-    background-color: #c7a76c;
-    color: #0a0a0a;
-    border: none;
-    padding: 0.7rem 2rem;
-    border-radius: 25px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 6px 12px rgba(199,167,108,0.5);
-}
-
-button:hover {
-    background-color: #f5d285;
-}
-
-/* Bulk Offer Section */
-.bulk-offer {
-    max-width: 700px;
-    background: #1a1a1a;
-    margin: 3rem auto 4rem;
-    padding: 2.5rem 2rem;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(199,167,108,0.15);
-    color: #d9cba1;
-}
-
-.bulk-offer h2 {
-    font-family: 'Georgia', serif;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: #c7a76c;
-    text-align: center;
-}
-
-.bulk-offer p {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 1.1rem;
-}
-
-form label {
-    display: block;
-    margin-bottom: 0.3rem;
-    font-weight: 600;
-    color: #b2a07d;
-}
-
-form input[type="text"],
-form input[type="email"],
-form input[type="number"],
-form textarea {
-    width: 100%;
-    padding: 0.7rem 1rem;
-    margin-bottom: 1.5rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #333333;
-    color: #f0e6d2;
-    font-size: 1rem;
-    resize: vertical;
-    transition: background-color 0.3s ease;
-}
-
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form input[type="number"]:focus,
-form textarea:focus {
-    background-color: #4e4e4e;
-    outline: none;
-}
-
-/* Submit button */
-form button[type="submit"] {
-    display: block;
-    width: 100%;
-    background-color: #c7a76c;
-    color: #0a0a0a;
-    border: none;
-    padding: 0.9rem 0;
-    border-radius: 30px;
-    font-weight: 700;
-    font-size: 1.2rem;
-    cursor: pointer;
-    box-shadow: 0 6px 14px rgba(199,167,108,0.5);
-    transition: background-color 0.3s ease;
-}
-
-form button[type="submit"]:hover {
-    background-color: #f5d285;
-}
-
-/* Footer */
-footer {
-    background: #121212;
-    text-align: center;
-    padding: 1.8rem 1rem;
-    border-top: 2px solid #c7a76c;
-    color: #b2a07d;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-}
-
-footer a {
-    color: #c7a76c;
-    font-weight: 600;
-}
-
-footer a:hover {
-    color: #f5d285;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .truffle-images {
+    /* Reset & base */
+    * {
+        margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+        font-family: 'Montserrat', sans-serif;
+        background: #1a1a1a;
+        color: #f3f0ea;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
         flex-direction: column;
     }
 
-    .truffle-images img {
-        max-width: 100%;
-        margin-bottom: 1rem;
+    /* Container */
+    header, section, footer {
+        width: 90%;
+        max-width: 1100px;
+        margin: 0 auto 40px;
+        text-align: center;
     }
-}
+
+    /* Header */
+    header {
+        padding: 40px 0 20px;
+        border-bottom: 1px solid #4a4a4a;
+    }
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        font-size: 3rem;
+        letter-spacing: 3px;
+        color: #d4af37; /* Aur */
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        text-shadow: 0 0 8px #d4af37;
+    }
+    header p {
+        font-size: 1.2rem;
+        color: #cfc9b8;
+        letter-spacing: 2px;
+    }
+
+    /* Hero */
+    .hero {
+        margin: 60px 0 80px;
+        background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+        padding: 100px 20px;
+        border-radius: 15px;
+        box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+        color: #fff;
+        text-shadow: 0 0 15px rgba(0,0,0,0.7);
+    }
+    .hero h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 3.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+        letter-spacing: 5px;
+    }
+    .hero p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+    }
+
+    /* Products */
+    .products {
+        margin-bottom: 60px;
+    }
+    .products h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .truffle-item {
+        background: #2c2c2c;
+        border-radius: 12px;
+        padding: 25px 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .truffle-item h3 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        color: #d4af37;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .truffle-images {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+    .truffle-images img {
+        width: 45%;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.8);
+        object-fit: cover;
+        height: 180px;
+    }
+
+    .truffle-item p {
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        color: #e0d8bf;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px 15px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: none;
+        margin-bottom: 15px;
+        background: #444;
+        color: #f3f0ea;
+        cursor: pointer;
+        box-shadow: inset 0 0 6px #222;
+        transition: background 0.3s ease;
+    }
+    select:hover, select:focus {
+        background: #555;
+    }
+
+    button {
+        background: #d4af37;
+        color: #1a1a1a;
+        font-weight: 700;
+        padding: 12px 25px;
+        border: none;
+        border-radius: 30px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        letter-spacing: 1.5px;
+        box-shadow: 0 0 20px #d4af37;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    button:hover {
+        background: #c19b2c;
+        transform: scale(1.05);
+    }
+
+    /* Bulk Offer Form */
+    .bulk-offer {
+        background: #2c2c2c;
+        padding: 40px 30px;
+        border-radius: 15px;
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+        max-width: 600px;
+        margin: 0 auto 80px;
+        color: #e0d8bf;
+    }
+    .bulk-offer h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin-bottom: 25px;
+        color: #d4af37;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    .bulk-offer p {
+        margin-bottom: 25px;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+    }
+    form label {
+        display: block;
+        text-align: left;
+        margin-bottom: 6px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: #d4af37;
+    }
+    form input, form textarea {
+        width: 100%;
+        padding: 10px 12px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+        border: none;
+        background: #444;
+        color: #f3f0ea;
+        font-size: 1rem;
+        box-shadow: inset 0 0 6px #222;
+        resize: vertical;
+        font-family: 'Montserrat', sans-serif;
+    }
+    form textarea {
+        min-height: 100px;
+    }
+
+    form button[type="submit"] {
+        width: 100%;
+        background: #d4af37;
+        color: #1a1a1a;
+        font-weight: 700;
+        padding: 14px;
+        font-size: 1.1rem;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 0 20px #d4af37;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+    form button[type="submit"]:hover {
+        background: #c19b2c;
+        transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+        padding: 30px 0;
+        border-top: 1px solid #4a4a4a;
+        text-align: center;
+        font-size: 1rem;
+        color: #cfc9b8;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+    footer a {
+        color: #d4af37;
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+    footer a:hover {
+        color: #f7e98e;
+    }
+
+    /* Responsive */
+    @media (max-width: 720px) {
+        .truffle-images {
+            flex-direction: column;
+        }
+        .truffle-images img {
+            width: 100%;
+            height: auto;
+        }
+        .hero h2 {
+            font-size: 2.4rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Truffle Elite</h1>
+    <p>Premium Truffles for Europe &amp; UK</p>
+</header>
+
+<section class="hero" aria-label="Hero section showcasing luxury truffles">
+    <h2>Indulge in Luxury</h2>
+    <p>Fresh Summer Truffles Starting at £135/kg</p>
+</section>
+
+<section class="products" aria-label="Our truffle products">
+    <h2>Our Truffles</h2>
+
+    <article class="truffle-item">
+        <h3>Summer Truffles</h3>
+        <div class="truffle-images">
+            <img src="images/summer-truffle-1.jpg" alt="Whole Summer Truffles" />
+            <img src="images/summer-truffle-2.jpg" alt="Cut Summer Truffles" />
+        </div>
+        <p>Price: £135/kg</p>
+        <p>Available in fixed quantities from 1kg to 10kg.</p>
+        <select id="quantity" aria-label="Select quantity for Summer Truffles">
+            <option value="1">1kg - £135</option>
+            <option value="2">2kg - £270</option>
+            <option value="3">3kg - £405</option>
+            <option value="4">4kg - £540</option>
+            <option value="5">5kg - £675</option>
+            <option value="6">6kg - £810</option>
+            <option value="7">7kg - £945</option>
+            <option value="8">8kg - £1080</option>
+            <option value="9">9kg - £1215</option>
+            <option value="10">10kg - £1350</option>
+        </select>
+        <button onclick="buyNow()" aria-label="Buy Now Summer Truffles">Buy Now</button>
+    </article>
+
+    <article class="truffle-item">
+        <h3>Autumn Truffles</h3>
+        <p>Coming Soon</p>
+    </article>
+
+    <article class="truffle-item">
+        <h3>Winter Truffles</h3>
+        <p>Coming Soon</p>
+    </article>
+</section>
+
+<section class="bulk-offer" aria-label="Bulk offer request form">
+    <h2>Request a Bulk Offer</h2>
+    <p>For quantities above 10kg, submit your offer below.</p>
+    <form id="bulkForm" onsubmit="submitBulkOffer(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Your Full Name" />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="your.email@example.com" />
+        <label for="quantity-bulk">Desired Quantity (kg):</label>
+        <input type="number" id="quantity-bulk" name="quantity-bulk" min="11" required placeholder="More than 10 kg" />
+        <label for="offer-price">Your Offer Price (£):</label>
+        <input type="number" id="offer-price" name="offer-price" required placeholder="Your proposed price" />
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Additional details (optional)"></textarea>
+        <button type="submit">Submit Offer</button>
+    </form>
+</section>
+
+<footer>
+    <p>Contact us: <a href="mailto:truffleelite627@gmail.com">truffleelite627@gmail.com</a></p>
+    <p>WhatsApp: <a href="https://wa.me/07846378560" target="_blank" rel="noopener noreferrer">07846378560</a></p>
+</footer>
+
+<script>
+    function buyNow() {
+        const qtySelect = document.getElementById('quantity');
+        const qty = qtySelect.value;
+        alert(`Thank you for your interest! You selected ${qty} kg of Summer Truffles. We will contact you shortly.`);
+        // aici poți adăuga funcționalitate de redirect sau procesare comandă
+    }
+
+    function submitBulkOffer(event) {
+        event.preventDefault();
+        const name = event.target['name'].value.trim();
+        const email = event.target['email'].value.trim();
+        const quantity = event.target['quantity-bulk'].value.trim();
+        const price = event.target['offer-price'].value.trim();
+        const message = event.target['message'].value.trim();
+
+        if(!name || !email || !quantity || !price) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+
+        alert(`Thank you, ${name}! Your bulk offer request for ${quantity} kg at £${price} has been received. We will contact you soon.`);
+
+        event.target.reset();
+
+        // Aici poți implementa trimiterea datelor la server sau API
+    }
+</script>
+
+</body>
+</html>
