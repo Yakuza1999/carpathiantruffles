@@ -1,171 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Premium wild truffles handpicked from Romania’s forests. Truffle Elite delivers fresh seasonal truffles to gourmet chefs and food lovers across the UK and Europe.">
-  <title>Truffle Elite</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #fff;
-      color: #222;
-    }
-
-    header {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin: 0;
-    }
-
-    .hero {
-      text-align: center;
-      padding: 2rem;
-      background-image: url('https://images.unsplash.com/photo-1576568693313-e38238fd4caa?auto=format&fit=crop&w=1470&q=80');
-      background-size: cover;
-      background-position: center;
-      color: #fff;
-    }
-
-    .hero h2 {
-      font-size: 2rem;
-      background-color: rgba(0, 0, 0, 0.6);
-      display: inline-block;
-      padding: 1rem;
-      border-radius: 10px;
-    }
-
-    .section {
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .truffles {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .truffle {
-      background-color: #f7f7f7;
-      border-radius: 10px;
-      width: 300px;
-      padding: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .truffle img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-    }
-
-    .price {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-      font-weight: bold;
-    }
-
-    .buy-button {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 0.8rem 1.2rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-      margin-top: 1rem;
-      display: inline-block;
-    }
-
-    form {
-      max-width: 400px;
-      margin: 2rem auto;
-      text-align: left;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .footer {
-      background-color: #1a1a1a;
-      color: #fff;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    .footer a {
-      color: #fff;
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .truffles {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Truffle Elite - Premium Summer Truffles</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>Truffle Elite</h1>
-    <p>Luxury wild truffles from the Romanian forests</p>
-  </header>
+    <!-- Header -->
+    <header>
+        <h1>Truffle Elite</h1>
+        <p>Premium Truffles for Europe & UK</p>
+    </header>
 
-  <div class="hero">
-    <h2>Fresh Summer Truffles – £120 / kg</h2>
-  </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Indulge in Luxury</h2>
+        <p>Fresh Summer Truffles Starting at £135/kg</p>
+    </section>
 
-  <section class="section">
-    <h2>Our Truffles</h2>
-    <div class="truffles">
-      <div class="truffle">
-        <img src="FDA4F60C-F49B-43AE-8B4D-92B7B087A5D8.jpeg" alt="Summer Truffle 1" />
-        <p class="price">£120 / kg</p>
-        <a class="buy-button" href="https://buy.stripe.com/5kA2aB2Xk0vF45qfYY" target="_blank">Buy with Stripe</a>
-      </div>
-      <div class="truffle">
-        <img src="935ECD6B-E70B-4F7A-8DC1-5AD1225BC505.webp" alt="Summer Truffle 2" />
-        <p class="price">£120 / kg</p>
-        <a class="buy-button" href="https://buy.stripe.com/5kA2aB2Xk0vF45qfYY" target="_blank">Buy with Stripe</a>
-      </div>
-      <div class="truffle">
-        <img src="D5AEA5D0-4D5E-4122-BBD1-A38EFF81F09B.webp" alt="Summer Truffle 3" />
-        <p class="price">£120 / kg</p>
-        <a class="buy-button" href="https://buy.stripe.com/5kA2aB2Xk0vF45qfYY" target="_blank">Buy with Stripe</a>
-      </div>
-    </div>
-  </section>
+    <!-- Product Section -->
+    <section class="products">
+        <h2>Our Truffles</h2>
+        <div class="truffle-item">
+            <h3>Summer Truffles</h3>
+            <img src="images/summer-truffle-1.jpg" alt="Summer Truffles Whole">
+            <img src="images/summer-truffle-2.jpg" alt="Summer Truffles Cut">
+            <p>Price: £135/kg</p>
+            <p>Available in fixed quantities from 1kg to 10kg.</p>
+            <select id="quantity">
+                <option value="1">1kg - £135</option>
+                <option value="2">2kg - £270</option>
+                <option value="3">3kg - £405</option>
+                <option value="4">4kg - £540</option>
+                <option value="5">5kg - £675</option>
+                <option value="6">6kg - £810</option>
+                <option value="7">7kg - £945</option>
+                <option value="8">8kg - £1080</option>
+                <option value="9">9kg - £1215</option>
+                <option value="10">10kg - £1350</option>
+            </select>
+            <button onclick="buyNow()">Buy Now</button>
+        </div>
+        <div class="truffle-item">
+            <h3>Autumn Truffles</h3>
+            <p>Coming Soon</p>
+        </div>
+        <div class="truffle-item">
+            <h3>Winter Truffles</h3>
+            <p>Coming Soon</p>
+        </div>
+    </section>
 
-  <section class="section">
-    <h2>Contact Us</h2>
-    <form action="mailto:truffleelite627@gmail.com" method="POST" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your message/order..." required></textarea>
-      <button class="buy-button" type="submit">Send</button>
-    </form>
-    <p>Or reach us on WhatsApp: <a href="https://wa.me/447846378560">+44 7846 378560</a></p>
-  </section>
+    <!-- Bulk Offer Form -->
+    <section class="bulk-offer">
+        <h2>Request a Bulk Offer</h2>
+        <p>For quantities above 10kg, submit your offer below.</p>
+        <form id="bulkForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="quantity-bulk">Desired Quantity (kg):</label>
+            <input type="number" id="quantity-bulk" name="quantity-bulk" min="11" required>
+            <label for="offer-price">Your Offer Price (£):</label>
+            <input type="number" id="offer-price" name="offer-price" required>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+            <button type="submit">Submit Offer</button>
+        </form>
+    </section>
 
-  <footer class="footer">
-    <p>&copy; 2025 Truffle Elite. All rights reserved.</p>
-    <p><a href="#">English</a> | <a href="#">Română</a></p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>Contact us: <a href="mailto:truffleelite627@gmail.com">truffleelite627@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/07846378560">07846378560</a></p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
+      
