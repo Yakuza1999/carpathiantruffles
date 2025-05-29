@@ -1,158 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Truffle Elite - Premium Fresh Truffles</title>
-    <style>
-        /* Reset and base */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #121212;
-            color: white;
-            line-height: 1.6;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        header {
-            background-color: #1a1a1a;
-            padding: 20px 15px;
-            text-align: center;
-            border-bottom: 2px solid #bfa243;
-        }
-        header h1 {
-            color: #bfa243;
-            font-weight: 700;
-            font-size: 2rem;
-            letter-spacing: 2px;
-        }
-        main {
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            flex-grow: 1;
-        }
-        h2 {
-            color: #bfa243;
-            margin-bottom: 15px;
-            font-weight: 600;
-            font-size: 1.8rem;
-            border-bottom: 2px solid #bfa243;
-            padding-bottom: 5px;
-        }
-        .truffle-section {
-            margin-bottom: 40px;
-        }
-        .truffle-images {
-            display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-            gap: 15px;
-            margin-top: 15px;
-        }
-        .truffle-images img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 2px solid #bfa243;
-            object-fit: cover;
-        }
-        .prices {
-            margin-top: 10px;
-            font-size: 1.1rem;
-            color: #fff;
-        }
-        .prices strong {
-            color: #bfa243;
-        }
-        .coming-soon {
-            color: #aaa;
-            font-style: italic;
-            margin-top: 5px;
-            font-size: 1.1rem;
-        }
-        .buy-now-btn {
-            background-color: #bfa243;
-            color: #121212;
-            padding: 12px 25px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
-            margin-top: 15px;
-        }
-        .buy-now-btn:hover {
-            background-color: #9c832e;
-        }
-        footer {
-            background-color: #1a1a1a;
-            padding: 15px 10px;
-            text-align: center;
-            border-top: 2px solid #bfa243;
-            color: #bfa243;
-            font-size: 1rem;
-        }
-        a.contact-link {
-            color: #bfa243;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        a.contact-link:hover {
-            text-decoration: underline;
-        }
-        /* Responsive */
-        @media (max-width: 600px) {
-            h2 {
-                font-size: 1.5rem;
-            }
-            .buy-now-btn {
-                width: 100%;
-                font-size: 1rem;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Truffle Elite - Premium Fresh Truffles</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid #bfa243;
+      border-bottom: 2px solid #bfa243;
+    }
+    header h1 {
+      color: #bfa243;
+      font-size: 2rem;
+      margin: 0;
+    }
+    main {
+      padding: 30px 15px;
+      max-width: 900px;
+      margin: auto;
+    }
+    section.truffle-box {
+      border: 1px solid #bfa243;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      background-color: #1f1f1f;
+    }
+    section.truffle-box img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      border: 2px solid #bfa243;
+      display: block;
+      margin: 15px auto;
+    }
+    h2 {
+      color: #bfa243;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .price {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+    .coming-soon {
+      text-align: center;
+      color: #aaa;
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-top: 10px;
+    }
+    .buy-now-btn {
+      display: block;
+      margin: 20px auto 0;
+      background-color: #bfa243;
+      color: #121212;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s ease;
+      text-align: center;
+      width: fit-content;
+    }
+    .buy-now-btn:hover {
+      background-color: #9c832e;
+    }
+    footer p {
+      color: #bfa243;
+      margin: 5px;
+      font-size: 0.95rem;
+    }
+    a {
+      color: #bfa243;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Truffle Elite</h1>
-    </header>
-    <main>
-        <!-- Fresh Summer Truffles -->
-        <section class="truffle-section" id="fresh-summer-truffles">
-            <h2>Fresh Summer Truffles</h2>
-            <p class="prices">Starting from <strong>£135/kg</strong></p>
-            <div class="truffle-images">
-                <img src="images/summer-truffle1.jpg" alt="Fresh Summer Truffle Whole 1" />
-                <img src="images/summer-truffle2.jpg" alt="Fresh Summer Truffle Whole 2" />
-                <img src="images/summer-truffle-cut1.jpg" alt="Fresh Summer Truffle Cut 1" />
-                <img src="images/summer-truffle-cut2.jpg" alt="Fresh Summer Truffle Cut 2" />
-            </div>
-            <a href="https://wa.me/447846378560" class="buy-now-btn" target="_blank" rel="noopener noreferrer">Buy Now on WhatsApp</a>
-        </section>
 
-        <!-- Fresh Autumn Truffles -->
-        <section class="truffle-section" id="fresh-autumn-truffles">
-            <h2>Fresh Autumn Truffles</h2>
-            <p class="coming-soon">Coming Soon</p>
-        </section>
+  <header>
+    <h1>Truffle Elite</h1>
+  </header>
 
-        <!-- Fresh Winter Truffles -->
-        <section class="truffle-section" id="fresh-winter-truffles">
-            <h2>Fresh Winter Truffles</h2>
-            <p class="coming-soon">Coming Soon</p>
-        </section>
-    </main>
-    <footer>
-        <p>Contact us on WhatsApp: <a href="https://wa.me/447846378560" class="contact-link" target="_blank" rel="noopener noreferrer">07846378560</a> | Email: <a href="mailto:truffleelite627@gmail.com" class="contact-link">truffleelite627@gmail.com</a></p>
-    </footer>
+  <main>
+
+    <!-- Summer Truffle -->
+    <section class="truffle-box">
+      <h2>Fresh Summer Truffles</h2>
+      <img src="images/summer-whole.jpg" alt="Fresh Summer Truffle Whole">
+      <p class="price">Starting from <strong>£135/kg</strong></p>
+      <a class="buy-now-btn" href="https://wa.me/447846378560" target="_blank">Buy Now on WhatsApp</a>
+    </section>
+
+    <!-- Autumn Truffle -->
+    <section class="truffle-box">
+      <h2>Fresh Autumn Truffles</h2>
+      <img src="images/autumn-whole.jpg" alt="Fresh Autumn Truffle">
+      <p class="coming-soon">Coming Soon</p>
+    </section>
+
+    <!-- Winter Truffle -->
+    <section class="truffle-box">
+      <h2>Fresh Winter Truffles</h2>
+      <img src="images/winter-whole.jpg" alt="Fresh Winter Truffle">
+      <p class="coming-soon">Coming Soon</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>WhatsApp: <a href="https://wa.me/447846378560" target="_blank">07846378560</a></p>
+    <p>Email: <a href="mailto:truffleelite627@gmail.com">truffleelite627@gmail.com</a></p>
+  </footer>
+
 </body>
 </html>
