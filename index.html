@@ -1,224 +1,104 @@
-p s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Carpathian Truffles</title>
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0; padding: 0;
-            background-color: #1f1f1f;
-            color: #e6d9b8;
-            line-height: 1.6;
-        }
-        header {
-            background: url('https://images.unsplash.com/photo-1602519248712-c49b7c1ba0e1?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
-            height: 500px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: #f8f1e4;
-            text-shadow: 1px 1px 6px #000;
-        }
-        header h1 {
-            font-size: 4rem;
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: 0.1em;
-            font-family: 'Georgia', serif;
-        }
-        header p {
-            font-size: 1.5rem;
-            margin-top: 15px;
-            font-style: italic;
-            max-width: 600px;
-        }
-        section {
-            max-width: 1100px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        h2 {
-            font-size: 2.5rem;
-            border-bottom: 3px solid #d4af37;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-            font-weight: 700;
-            color: #d4af37;
-            font-family: 'Georgia', serif;
-        }
-        .truffle-types {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: center;
-        }
-        .truffle-card {
-            background-color: #2f2f2f;
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(212,175,55,0.6);
-            overflow: hidden;
-            flex: 1 1 300px;
-            max-width: 320px;
-            transition: transform 0.3s ease;
-        }
-        .truffle-card:hover {
-            transform: scale(1.05);
-        }
-        .truffle-card img {
-            width: 100%;
-            display: block;
-            height: 220px;
-            object-fit: cover;
-        }
-        .truffle-card h3 {
-            margin: 15px 20px 5px;
-            font-family: 'Georgia', serif;
-            font-weight: 600;
-            color: #d4af37;
-            font-size: 1.6rem;
-        }
-        .truffle-card p {
-            margin: 0 20px 20px;
-            color: #ccc9b1;
-            font-size: 1rem;
-        }
-        form {
-            background-color: #2f2f2f;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(212,175,55,0.7);
-            max-width: 600px;
-            margin: 0 auto 50px;
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 15px;
-            margin-bottom: 20px;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-family: 'Georgia', serif;
-            background-color: #444;
-            color: #e6d9b8;
-            resize: none;
-        }
-        form input::placeholder, form textarea::placeholder {
-            color: #c9c3a8;
-            font-style: italic;
-        }
-        form button {
-            background-color: #d4af37;
-            color: #1f1f1f;
-            border: none;
-            padding: 15px 25px;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            cursor: pointer;
-            font-weight: 700;
-            transition: background-color 0.3s ease;
-            font-family: 'Georgia', serif;
-        }
-        form button:hover {
-            background-color: #b08a18;
-        }
-        footer {
-            background-color: #111;
-            color: #d4af37;
-            text-align: center;
-            padding: 25px 10px;
-            font-family: 'Georgia', serif;
-            font-size: 1rem;
-        }
-        footer p {
-            margin: 0;
-        }
-        a {
-            color: #d4af37;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.8rem;
-            }
-            header p {
-                font-size: 1rem;
-                max-width: 90%;
-            }
-            .truffle-types {
-                flex-direction: column;
-                align-items: center;
-            }
-            .truffle-card {
-                max-width: 90%;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wild Truffles from Romania</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #2c3e50;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1em;
+    }
+
+    .truffle {
+      background: white;
+      margin-bottom: 2em;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .truffle img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .truffle-content {
+      padding: 1em;
+    }
+
+    .truffle-content h2 {
+      margin-top: 0;
+      color: #2c3e50;
+    }
+
+    @media (min-width: 768px) {
+      .truffle {
+        display: flex;
+      }
+
+      .truffle img {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+      }
+
+      .truffle-content {
+        flex: 1;
+      }
+    }
+  </style>
 </head>
 <body>
-
-<header>
-    <h1>Carpathian Truffles</h1>
-    <p>Wild truffles from the Carpathian Mountains, delivered across Europe and the UK in 1–3 working days.</p>
-</header>
-
-<section>
-    <h2>About Us</h2>
-    <p>We source premium wild truffles directly from the heart of the Carpathian forests in Romania. Carefully handpicked and selected by expert foragers, our truffles are delivered fresh and fast to meet the highest culinary standards. We operate seasonally and deliver up to 100 kg per week to restaurants, distributors, and culinary professionals across Europe and the UK.</p>
-</section>
-
-<section>
-    <h2>Seasonal Truffles</h2>
-    <div class="truffle-types">
-        <div class="truffle-card">
-            <img src="https://images.unsplash.com/photo-1631730484412-61e2688b2e5a?auto=format&fit=crop&w=800&q=80" alt="Summer Truffles" />
-            <h3>Summer Truffles</h3>
-            <p>Available from May to August. Light aroma, firm texture – perfect for pasta, risotto, and oils.</p>
-            <p><strong>£120 / kg</strong></p>
-        </div>
-        <div class="truffle-card">
-            <img src="https://images.unsplash.com/photo-1608723952961-e675e09cf0e0?auto=format&fit=crop&w=800&q=80" alt="Autumn Truffles" />
-            <h3>Autumn Truffles</h3>
-            <p>Available from September to November. Richer in flavor, perfect for gourmet sauces and meat dishes.</p>
-        </div>
-        <div class="truffle-card">
-            <img src="https://images.unsplash.com/photo-1631730391693-6e5f91c9e02f?auto=format&fit=crop&w=800&q=80" alt="Winter Truffles" />
-            <h3>Winter Truffles</h3>
-            <p>Available from December to February. Deep, earthy aroma – the luxury centerpiece of any fine meal.</p>
-        </div>
+  <header>
+    <h1>Wild Truffles from Romania</h1>
+    <p>We deliver fresh truffles across the UK and Europe</p>
+  </header>
+  <div class="container">
+    <div class="truffle">
+      <img src="trufa1.webp" alt="Summer Truffles" />
+      <div class="truffle-content">
+        <h2>Summer Truffles (Tuber Aestivum)</h2>
+        <p>Summer truffles have a delicate, fresh aroma. Perfect for pasta, eggs, and risotto.</p>
+        <p><strong>Price:</strong> £120 / kg</p>
+      </div>
     </div>
-</section>
 
-<section>
-    <h2>Wholesale & Delivery</h2>
-    <p>We deliver truffles across the UK and EU in 1–3 working days. Maximum supply: 100 kg per week. For wholesale inquiries and custom offers, please fill out the contact form below or email us directly.</p>
-</section>
+    <div class="truffle">
+      <img src="trufa2.webp" alt="Autumn Truffles" />
+      <div class="truffle-content">
+        <h2>Autumn Truffles</h2>
+        <p>Stronger aroma with a deep, earthy flavor. Ideal for more refined dishes.</p>
+        <p><strong>Price:</strong> £150 / kg</p>
+      </div>
+    </div>
 
-<section>
-    <h2>Contact Us</h2>
-    <form action="mailto:Truffleelite627@gmail.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="text" name="country" placeholder="Country" />
-        <textarea name="message" placeholder="Your Message (e.g. Quantity, Type of Truffles, Delivery Date)" rows="6"></textarea>
-        <button type="submit">Send Request</button>
-    </form>
-    <p>You can also contact us directly at:<br />
-        <strong>Email:</strong> <a href="mailto:Truffleelite627@gmail.com">Truffleelite627@gmail.com</a><br />
-        <strong>Phone:</strong> <a href="tel:+447846378560">+44 7846 378560</a>
-    </p>
-</section>
-
-<footer>
-    <p>&copy; 2025 Carpathian Truffles. All rights reserved.</p>
-</footer>
-
+    <div class="truffle">
+      <img src="trufa3.jpeg" alt="Winter Truffles" />
+      <div class="truffle-content">
+        <h2>Winter Truffles (Tuber Melanosporum)</h2>
+        <p>The most prized variety. Intense flavor and unmistakable aroma. A true gourmet ingredient.</p>
+        <p><strong>Price:</strong> £300 / kg</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
-
+        
