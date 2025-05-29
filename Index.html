@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Truffle Elite - Premium Truffles</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Truffle Elite</h1>
+        <p>Welcome — the truffles come from Europe, the best truffle source.</p>
+    </header>
+
+    <section class="hero">
+        <h2>Fresh Premium Truffles</h2>
+        <p>Now Shipping to the UK & All of Europe</p>
+    </section>
+
+    <section class="products">
+        <h2>Our Truffles</h2>
+
+        <!-- Summer Truffles -->
+        <div class="truffle-item">
+            <h3>Fresh Summer Truffles</h3>
+            <img src="images/summer-truffle.jpg" alt="Fresh Summer Truffle">
+            <p>Price: £135/kg</p>
+            <label for="quantity">Select quantity:</label>
+            <select id="quantity">
+                <option value="1">1kg - £135</option>
+                <option value="2">2kg - £270</option>
+                <option value="3">3kg - £405</option>
+                <option value="4">4kg - £540</option>
+                <option value="5">5kg - £675</option>
+                <option value="6">6kg - £810</option>
+                <option value="7">7kg - £945</option>
+                <option value="8">8kg - £1080</option>
+                <option value="9">9kg - £1215</option>
+                <option value="10">10kg - £1350</option>
+            </select>
+            <a class="buy-now" href="https://wa.me/447846378560" target="_blank">Buy Now on WhatsApp</a>
+        </div>
+
+        <!-- Autumn Truffles -->
+        <div class="truffle-item">
+            <h3>Fresh Autumn Truffles</h3>
+            <img src="images/autumn-truffle.jpg" alt="Fresh Autumn Truffle">
+            <p>Coming Soon</p>
+        </div>
+
+        <!-- Winter Truffles -->
+        <div class="truffle-item">
+            <h3>Fresh Winter Truffles</h3>
+            <img src="images/winter-truffle.jpg" alt="Fresh Winter Truffle">
+            <p>Coming Soon</p>
+        </div>
+    </section>
+
+    <section class="bulk-offer">
+        <h2>Bulk Orders (10kg+)</h2>
+        <p>Submit your offer and we’ll get back to you shortly via WhatsApp.</p>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="quantity-bulk">Quantity (kg):</label>
+            <input type="number" id="quantity-bulk" min="11" required>
+
+            <label for="offer">Your Offer Price (£):</label>
+            <input type="number" id="offer" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message"></textarea>
+
+            <a class="submit-offer" href="https://wa.me/447846378560" target="_blank">Submit via WhatsApp</a>
+        </form>
+    </section>
+
+    <footer>
+        <p>Contact us: <a href="mailto:truffleelite627@gmail.com">truffleelite627@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/447846378560">+44 7846 378560</a></p>
+    </footer>
+</body>
+</html>
